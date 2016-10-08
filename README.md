@@ -13,7 +13,20 @@ Have you ever wondered how operating systems work? In this session, Steve and As
 
 ## Prerequisites
 
+
+
 ## Environment
+
+- [Rust](http://intermezzos.github.io/book/installing-rust.html)
+
+### Operating System Specific
+- [Linux](http://intermezzos.github.io/book/linux.html)
+- [MacOS or Mac OS X](http://intermezzos.github.io/book/osx.html)
+- [Windows](http://intermezzos.github.io/book/windows.html)
+
+### Virtualization Options
+- [Vagrant](NEED LINK)
+- [Docker](https://github.com/intermezzOS/docker)
 
 ## Learning Objectives
 
