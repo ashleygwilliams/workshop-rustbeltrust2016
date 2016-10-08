@@ -10,3 +10,17 @@ Have you ever wondered how operating systems work? In this session, Steve and As
 - printing to the screen
 - keyboard input and interrupts
 - Maybe more!
+
+## Prerequisites
+
+## Environment
+
+## Learning Objectives
+
+## Schedule
+
+## Supporting Materials
+
+## Challenges
+
+## Next Steps
