@@ -42,14 +42,17 @@ with intermezzOS, a learning kernel for the x86_64 platform, written in Rust
 
 ## Schedule
 
-The schedule is structured like a song, in ABABCB form. Some popular songs with
+The schedule is structured like a song, in [ABABCB] form. Some popular songs with
 this structure:
+
+[ABABCB]: https://en.wikipedia.org/wiki/Song_structure#Variation_on_the_basic_structure
 
 * “What’s Love Got To Do With it” by Tina Turner
 * “Girl” by The Beatles
 * “Hot N Cold” by Katy Perry
 
-There's three kinds of sections: verses, choruses, and a bridge.
+There's three kinds of sections: verses, choruses, and a bridge. (A is "verse",
+B is "chorus", C is "bridge".)
 
 * The chorus contains the main idea, or big picture, of what is being expressed
   lyrically and musically. 
