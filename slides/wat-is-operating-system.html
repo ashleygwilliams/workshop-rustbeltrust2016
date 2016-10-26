@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>intermezzOS workshop</title>
+    <link rel="stylesheet" href="../public/vendor/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="../public/vendor/Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" href="../public/styles/slides.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: middle, center
+
+![rhizome](../public/images/rhizome.jpg)
+
+## .subtitle[Wat is operating system?]
+
+---
+class: middle, center
+
+# Nobody really can say
+
+## .subtitle[Or rather, everyone can say?]
+
+---
+
+# Three definitions
+
+[Exterminate All Operating System Abstractions](https://people.eecs.berkeley.edu/~brewer/cs262b/hotos-exokernel.pdf):
+
+> "software that securely multiplexes and abstracts physical resources"
+
+But, uh...
+
+> We believe that this denition specifically its view of the OS as an
+> abstractor of hardware, is crippling and wrong.
+
+---
+
+# Three definitions
+
+[Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/):
+
+1. Virtualization
+2. Concurrency
+3. Persistence
+
+---
+
+# Three definitions
+
+[Modern Operating Systems](https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X):
+
+> It is hard to pin down what an operating system is other than saying it is
+> the software that runs in kernel mode—and even that is not always true. Part
+> of the problem is that operating systems perform two basically unrelated
+> functions: providing application programmers a clean abstract set of
+> resources instead of the messy hardware ones and managing these hardware
+> resources.
+
+---
+
+# "Kernel" vs. "Operating System"
+
+- This is also a bit fuzzy
+- "the software that runs in kernel mode", "even that is not always true"
+- The kernel is the core of the operating system.
+
+---
+
+# Kinds of kernels
+
+- monolithic kernel
+- microkernel
+- exokernel
+- unikernel
+
+---
+
+# Common abstractions
+
+These are some common abstractions provided by an operating system and/or kernel:
+
+- address spaces
+- memory protection
+- processes
+- files
+- input/output devices
+
+---
+
+# Some quick history
+
+Another way to divide up kinds of kernels is through a sort of history:
+
+- no OS
+- batch OS
+- single user
+- multi user
+
+Each of these changes caused new features to be required.
+
+---
+
+# Some quick history
+
+![core war](../public/images/corewar.png)
+
+    </textarea>
+    <script src="../public/vendor/remark.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
