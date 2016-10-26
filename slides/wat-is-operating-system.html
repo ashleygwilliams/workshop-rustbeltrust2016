@@ -24,29 +24,7 @@ class: middle, center
 ## .subtitle[Or rather, everyone can say?]
 
 ---
-
-# Three definitions
-
-[Exterminate All Operating System Abstractions](https://people.eecs.berkeley.edu/~brewer/cs262b/hotos-exokernel.pdf):
-
-> "software that securely multiplexes and abstracts physical resources"
-
-But, uh...
-
-> We believe that this denition specifically its view of the OS as an
-> abstractor of hardware, is crippling and wrong.
-
----
-
-# Three definitions
-
-[Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/):
-
-1. Virtualization
-2. Concurrency
-3. Persistence
-
----
+class: middle, left
 
 # Three definitions
 
@@ -60,6 +38,67 @@ But, uh...
 > resources.
 
 ---
+class: middle, left
+
+# Three definitions
+
+[Three Easy Pieces](http://pages.cs.wisc.edu/~remzi/OSTEP/):
+
+1. Virtualization
+2. Concurrency
+3. Persistence
+
+---
+class: middle, left
+
+# Three definitions
+
+[Exterminate All Operating System Abstractions](https://people.eecs.berkeley.edu/~brewer/cs262b/hotos-exokernel.pdf):
+
+> "software that securely multiplexes and abstracts physical resources"
+
+But, uh...
+
+> We believe that this denition specifically its view of the OS as an
+> abstractor of hardware, is crippling and wrong.
+
+---
+class: middle, center
+
+# abstractions
+
+---
+class: middle, center
+
+![program-hardware](../public/images/program_hardware.png)
+
+---
+class: middle, center
+
+![program-os-hardwares](../public/images/program_os_hardware.png)
+
+---
+class: middle, center
+
+![program-vm-oss-hardwares](../public/images/program_vm_os_hardware.png)
+
+---
+class: middle, left
+
+### We now have a pattern:
+
+- ## I have `A`.
+- ## `A` is written explicitly for `X`...
+- ## ... but I want to support `X` and `Y`,
+- ## <strong>so I put .highlight[abstraction] `B` in the middle.</strong>
+
+---
+class: middle, center
+
+# isolation
+
+---
+class: middle, left
 
 # "Kernel" vs. "Operating System"
 
@@ -68,6 +107,7 @@ But, uh...
 - The kernel is the core of the operating system.
 
 ---
+class: middle, left
 
 # Kinds of kernels
 
@@ -77,6 +117,7 @@ But, uh...
 - unikernel
 
 ---
+class: middle, left
 
 # Common abstractions
 
@@ -89,6 +130,7 @@ These are some common abstractions provided by an operating system and/or kernel
 - input/output devices
 
 ---
+class: middle, left
 
 # Some quick history
 
