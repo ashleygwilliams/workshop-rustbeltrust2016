@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>intermezzOS workshop</title>
+    <link rel="stylesheet" href="../public/vendor/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="../public/vendor/Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" href="../public/styles/slides.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: middle, center
+
+![rhizome](../public/images/rhizome.jpg)
+
+## .subtitle[The Boot Process]
+
+---
+class: middle, left
+
+# Roadmap
+
+- multiboot headers
+- hello world
+- making an iso / running in qemu
+- paging
+- gdt
+- jump to long mode
+- hello rust
+
+---
+class: middle, left
+
+# multiboot headers
+
+- Hardware loads the BIOS
+- The BIOS loads a bootloader (actually two)
+- The bootloader wants to load your kernel
+- Multiboot is a spec for kernels + bootloaders
+
+---
+class: middle, left
+
+# multiboot headers
+
+Request:
+
+```http
+GET / HTTP/1.1
+Host: intermezzos.github.io
+```
+
+Response:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<html><p>sup</p></html>
+```
+
+---
+class: middle, center
+
+# multiboot headers
+
+Multiboot headers are kind of like HTTP response headers. They let the
+bootloader and the kernel talk to each other, exactly like the HTTP spec
+lets a client and server talk to each other.
+
+---
+class: middle, left
+
+# hello world
+
+```x86asm
+start:
+    mov word [0xb8000], 0x0248 ; H
+    mov word [0xb8002], 0x0265 ; e
+    mov word [0xb8004], 0x026c ; l
+    mov word [0xb8006], 0x026c ; l
+    mov word [0xb8008], 0x026f ; o
+```
+
+---
+class: middle, left
+
+# making an iso
+
+- the bootloader has to load the OS from somewhere
+- ISO is the file format for CD-ROMs
+- We take our code, and make a CD-ROM out of it
+
+---
+class: middle, left
+
+# running in qemu
+
+- qmeu lets us pretend to have a virtual computer
+- we boot it off that CD-ROM
+- if we're not on an x86_64 system, it emulates one
+
+---
+class: middle, left
+
+# the path to long mode
+
+- GRUB starts us in 32-bit mode
+- we want to be in 64-bit mode
+- that takes work
+
+---
+class: middle, left
+
+# the path to long mode
+
+- 16 bit: real mode
+- 32 bit: protected mode
+- 64 bit: long mode (compatibility)
+- 64 bit: long mode (forreals)
+
+---
+class: middle, left
+
+# paging
+
+- a huge topic in CS
+- conversion between memory addresses and address spaces
+- physical address, virtual address
+- required for long mode
+- we'll do the most basic possible thing
+- after we turn this on, we're in compatibility mode
+
+---
+class: middle, left
+
+# gdt
+
+- "global descriptor table"
+- entirely legacy but required by the hardware
+- three entries in the table
+- `lidt`: special assembly instruction
+
+---
+class: middle, left
+
+# jump to long mode
+
+- my favorite part of the boot process
+- `jmp` in a way that should be impossible
+- "oh wait, yeah, I'm totally a 64-bit enabled computer"
+
+---
+class: middle, left
+
+# hello rust
+
+Now that we're in long mode, we can use Rust.
+
+    </textarea>
+    <script src="../public/vendor/remark.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
